@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.py"
+      }
+    ],
+    "env": {
+      "CLIENT_ID": "YR2z_EJT06y3703bK9R3w",
+      "CLIENT_SECRET": "oHwWedItQEqlT2u2oSL1XEruAO0DrSD0",
+      "REDIRECT_URI": "http://localhost:3000/callback"
+    }
+  }
+  
